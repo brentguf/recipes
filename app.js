@@ -28,5 +28,6 @@ const store = createStore(reducer, initialState);
 window.store = store;
 
 store.subscribe(() => document.getElementById('app').innerText = store.getState());
-
 document.getElementById('app').innerText = store.getState();
+
+store.dispatch({ type: 'ADD_RECIPE', name: 'Spring rolls' });
