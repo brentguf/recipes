@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import reducer from '.././root';
+import reducer from '../reducers/root';
 
 const initialState = {
   recipes: [
