@@ -1,9 +1,11 @@
 import { createStore } from 'redux';
 
 const reducer = (state, action) => {
-  switch(action) {
-    case 'INC':
-      return state + 1;
+  switch(action.type) {
+    case 'ADD_RECIPE':
+      return { ...state, 
+        recipes: [...state.recipes, { action: action.name }] 
+      }
     default:
       return state;
   }
