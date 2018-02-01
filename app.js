@@ -25,6 +25,7 @@ const initialState = {
 };
 
 const store = createStore(reducer, initialState);
+window.store = store;
 
 store.subscribe(() => document.getElementById('app').innerText = store.getState());
 
