@@ -9,9 +9,23 @@ const reducer = (state, action) => {
   }
 }
 
-const initialState = 0;
+const initialState = {
+  recipes: [
+    {
+      name: 'Smoothie'
+    }
+  ], 
+  ingredients: [
+    {
+      recipe: 'Smoothie',
+      name: 'banana',
+      quantity: 2
+    }
+  ]
+};
 
 const store = createStore(reducer, initialState);
 
 store.subscribe(() => document.getElementById('app').innerText = store.getState());
 
+document.getElementById('app').innerText = store.getState();
