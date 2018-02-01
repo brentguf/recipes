@@ -1,0 +1,19 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --progress"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "jquery": "3.2.1",
+    "redux": "3.7.2"
+  },
+  "devDependencies": {
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7"
+  }
+}
