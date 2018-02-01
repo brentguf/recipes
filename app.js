@@ -1,11 +1,12 @@
 import { createStore } from 'redux';
 
 const reducer = (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ADD_RECIPE':
-      return { ...state, 
-        recipes: [...state.recipes, { action: action.name }] 
-      }
+      return Object.assign({},
+        state, 
+        { recipes: state.recipes.concat({ name: action.name }) }
+      );
     default:
       return state;
   }
