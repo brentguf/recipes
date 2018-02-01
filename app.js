@@ -34,3 +34,6 @@ store.subscribe(() => document.getElementById('app').innerText = store.getState(
 document.getElementById('app').innerText = store.getState();
 
 store.dispatch({ type: 'ADD_RECIPE', name: 'Spring rolls' });
+
+const addIngredient = (recipe, name, quantity) => { type: 'ADD_INGREDIENT', recipe, name, quantity }
+store.dispatch(addIngredient('Spring Rolls', 'rice paper', 8));
