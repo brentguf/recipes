@@ -18,6 +18,6 @@ const initialState = {
 
 const store = createStore(reducer, initialState);
 
-store.subscribe(() => document.getElementById('app').innerText = store.getState());
+window.store = store;
 
 export default store;
